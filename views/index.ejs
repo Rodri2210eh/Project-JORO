@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login Form | Liceo Atenas</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="header">
+        <h1>Liceo de Atenas Martha Mirambell Umaña</h1>
+      </div>
+
+    <div class="login-box">
+        <h1>
+            <i class='far fa-address-card' style='font-size:36px'> Ingrese a su cuenta</i>
+        </h1>
+        <form action="" method="POST">
+            <!-- USERNAME INPUT -->
+            <label for="username">
+                <i class='fas fa-user-circle' style='font-size:24px'> Usuario</i>
+            </label>
+            <input id="username" name="username" type="text" placeholder="Ingrese su usuario">
+            <!-- PASSWORD INPUT -->
+            <label for="password">
+                <i class='fas fa-key' style='font-size:24px'> Contraseña</i>
+            </label>
+            <input id="password" name="password" type="password" placeholder="Ingrese su contraseña">
+            <button type="submit">Ingresar</button>
+        </form>
+    </div>
+
+    <%
+    if (message === "Mal"){ %>
+      <div class="alert alert-danger" role="alert">
+        "El usuario o contraseña ingresado es incorrecto"
+      </div>
+    <% }%>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Información Estudiante | Liceo Atenas</title>
+    <link href="styles/styleMostrarEstudiante.css" rel="stylesheet" type="text/css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="header">
+      <a href="buscarInformacion"><i class='fas fa-arrow-circle-left' style='font-size:50px'> </i></a>
+      <h1>Liceo de Atenas Martha Mirambell Umaña</h1>
+    </div>
+
+    <div class="studentTable">
+      <table class = "table table-striped">
+        <thead>
+          <th>Nombre Completo</th>
+          <th>Grupo</th>
+          <th>Año</th>
+          <th>Nombre del tutor</th>
+          <th>Correo electrónico del tutor</th>
+          <th>Teléfono del tutor</th>
+          <th>Estado del estudiante</th>
+        </thead>
+        <tbody>
+          <td><%= message[2] %></td>
+          <td><%= message[1] %></td>
+          <td><%= message[3] %></td>
+          <td><%= message[4] %></td>
+          <td><%= message[5] %></td>
+          <td><%= message[6] %></td>
+          <td><%= message[13] %></td>
+        </tbody>
+      </table>
+    </div>
+    <div class="auxTable">
+      <table class="table table-striped">
+        <thead>
+          <th>Nombre del orientador</th>
+          <th>Correo del Orientador</th>
+          <th>Nombre del Profesor guia</th>
+          <th>Correo del profesor guia</th>
+          <th>Nombre del Auxiliar</th>
+          <th>Correo del Auxiliar</th>
+          <th>Cantidad de ausencias</th>
+        </thead>
+        <tbody>
+          <td><%= message[7] %></td>
+          <td><%= message[8] %></td>
+          <td><%= message[9] %></td>
+          <td><%= message[10] %></td>
+          <td><%= message[11] %></td>
+          <td><%= message[12] %></td>
+          <td><%= message[14] %></td>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

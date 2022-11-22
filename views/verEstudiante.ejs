@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Información Estudiante | Liceo Atenas</title>
+    <link href="styles/styleVerEstudiante.css" rel="stylesheet" type="text/css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="header">
+      <a href="editStudent"><i class='fas fa-arrow-circle-left' style='font-size:50px'> </i></a>
+      <h1>Liceo de Atenas Martha Mirambell Umaña</h1>
+    </div>
+
+    <div class="login-box">
+        <h1>Los datos del estudiante son: </h1>
+        <form action="" method="POST">
+          <!-- nombreCompleto INPUT -->
+          <h1><%= message[2] %></h1>
+          <label for="nombreCompleto">Nombre Completo</label>
+          <input id="nombreCompleto" name ="nombreCompleto" type="text" value= "<%= message[2] %>">
+          <!-- nombreTutor INPUT -->
+          <label for="nombreTutor">Nombre del tutor</label>
+          <input id="nombreTutor" name="nombreTutor" type="text" value= "<%= message[4] %>">
+          <!-- correoTutor INPUT -->
+          <label for="correoTutor">Correo del tutor</label>
+          <input id="correoTutor" name="correoTutor" type="text" value= "<%= message[5] %>">
+          <!-- correoTutor INPUT -->
+          <label for="telefonoTutor">Teléfono del tutor</label>
+          <input id="telefonoTutor" name="telefonoTutor" type="text" value= "<%= message[6] %>">
+          <!-- Año INPUT -->
+          <label for="año">Nivel</label>
+          <input id="año" name="año" type="text" value= "<%= message[3] %>" readonly>
+          <!-- Grupo INPUT -->
+          <label for="grupo">Grupo</label>
+          <input id="grupo" name="grupo" type="text" value= "<%= message[1] %>">
+          </label>
+          <label for="estado">Estado</label>
+          <%
+          if (message[7] === "Activo"){ %>
+            <select name="estado" id="grupo">
+              <option value="Activo">Activo</option>
+              <option value="Deserto">Deserto</option>
+              <option value="Traslado">Traslado</option>
+            </select>
+          <% }%>
+          <%
+          if (message[7] === "Deserto"){ %>
+            <select name="estado" id="grupo">
+              <option value="Deserto">Deserto</option>
+              <option value="Activo">Activo</option>
+              <option value="Traslado">Traslado</option>
+            </select>
+          <% }%>
+          <%
+          if (message[7] === "Traslado"){ %>
+            <select name="estado" id="grupo">
+              <option value="Traslado">Traslado</option>
+              <option value="Deserto">Deserto</option>
+              <option value="Activo">Activo</option>
+            </select>
+          <% }%>
+          <button type="submit">Modificar</button>
+      </form>
+    </div>
+  </body>
+</html>

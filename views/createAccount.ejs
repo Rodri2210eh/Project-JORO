@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Create Account | LUMMA</title>
+    <link href="styles/styleCreateAccount.css" rel="stylesheet" type="text/css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="header">
+      <a href="administrarCuentas"><i class='fas fa-arrow-circle-left' style='font-size:50px'> </i></a>
+      <h1>Liceo de Atenas Martha Mirambell Umaña</h1>
+    </div>
+
+    <div class="login-box">
+        <h1>Ingrese los datos al nuevo profesor</h1>
+        <form action="" method="POST">
+            <!-- NAME INPUT -->
+            <label for="name">Nombre</label>
+            <input id="name" name ="name" type="text" placeholder="Ingrese el nombre">
+            <!-- LASTNAME INPUT -->
+            <label for="lastname">Apellido</label>
+            <input id="lastname" name="lastname" type="text" placeholder="Ingrese el apellido">
+            <!-- USERNAME INPUT -->
+            <label for="username">Usuario</label>
+            <input id="username" name="username" type="text" placeholder="Ingrese su usuario">
+            <!-- PASSWORD INPUT -->
+            <label for="password">Contraseña</label>
+            <input id="password" name="password" type="password" placeholder="Ingrese la Contraseña">
+            <!-- ROL INPUT -->
+            <label for="rol">Rol</label>
+            <select name="rol" id="rol">
+              <option value="profesor">profesor</option>
+              <option value="administrador">administrador</option>
+            </select>
+            <button type="submit" id="addAccount">Ingresar</button>
+        </form>
+    </div>
+
+    <% if (message === "200 OK"){ %>
+      <div class="alert alert-success" role="alert">
+        Usuario ingresado exitosamente
+      </div>
+    <% } 
+    if (message === "Mal"){ %>
+      <div class="alert alert-danger" role="alert">
+        "El usuario ingresado ya existe intente con uno nuevo"
+      </div>
+      <% } 
+      if (message === "Mal pass"){ %>
+        <div class="alert alert-danger" role="alert">
+          "La contraseña ingresada no cumple con la seguridad necesaria, debe tener 8 caracteres minimo, 1 numero, mayuscula, miniscula y no debe poseer espacios"
+        </div>
+      <% }%>
+
+  
+  </body>
+</html>

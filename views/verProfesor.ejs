@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ver Profesor | Liceo Atenas</title>
+    <link href="styles/styleVerProfesor.css" rel="stylesheet" type="text/css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="header">
+      <a href="editAccount"><i class='fas fa-arrow-circle-left' style='font-size:50px'> </i></a>
+      <h1>Liceo de Atenas Martha Mirambell Umaña</h1>
+    </div>
+
+    <div class="login-box">
+        <h1>Ingrese los datos al nuevo profesor</h1>
+        <form action="" method="POST">
+            <!-- NAME INPUT -->
+            <label for="name">Nombre</label>
+            <input id="name" name ="name" type="text" value= "<%= message[1] %>">
+            <!-- LASTNAME INPUT -->
+            <label for="lastname">Apellido</label>
+            <input id="lastname" name="lastname" type="text" value= "<%= message[2] %>">
+            <!-- USERNAME INPUT -->
+            <label for="username">Usuario</label>
+            <input id="username" name="username" type="text" value= "<%= message[3] %>" readonly>
+            <!-- PASSWORD INPUT -->
+            <label for="password">Contraseña</label>
+            <input id="password" name="password" type="password" value= "<%= message[4] %>">
+            <!-- ROL INPUT -->
+            <label for="rol">Rol</label>
+            <% if (message[5] == "profesor") { %>
+              <select name="rol" id="rol">
+                <option value="Profesor">profesor</option>
+                <option value="Admistrativo">administrador</option>
+              </select>
+            <%} else { %>
+              <select name="rol" id="rol">
+                <option value="administrador">administrador</option>
+                <option value="profesor">profesor</option>
+              </select>
+            <%} %>
+            <label for="">
+              <h1></h1>
+            </label>
+            <button type="submit" id="editAccount">Modificar</button>
+        </form>
+    </div>
+  </body>
+</html>

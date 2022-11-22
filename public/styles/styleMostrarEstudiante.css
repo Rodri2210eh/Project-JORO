@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../images/bg.jpg) no-repeat center top;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+  }
+  
+  .header {
+    padding: 50px;
+    background: #0D99FF;
+    color: white;
+    font-size: 25px;
+  }
+
+  .header h1{
+    text-align: center;
+  }
+
+  .header i{
+    position:absolute;
+    bottom: 5%;
+    left:10%;
+    text-align: left;
+    border: none;
+    outline: none;
+    height: 70px;
+    background: #989898;
+    color: #fff;
+    border-radius: 20px;
+  }
+
+  .header i:hover {
+    cursor: pointer;
+    background: #9F84EE;
+    color: #000;
+  }
+  
+  .studentTable {
+    margin-left:auto;
+    margin-right:auto;
+    border-bottom: 2px solid #ddd;
+  }
+
+  .auxTable {
+    margin-left:auto;
+    margin-right:auto;
+    left: 50%;
+    top: 20%;
+    border-bottom: 2px solid #ddd;
+  }
