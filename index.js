@@ -14,7 +14,7 @@ const client = async (req, res) => {
 //Instance of the googlesheets
 const googleSheets = google.sheets({version: "v4", auth: client});
 
-const spreadsheetId = "16WEvH9Kuz8YYItsAPTBNuqJx6gLNVrjVgwU_8ANmIeY";
+const spreadsheetId = "spreadsheetId";
 let profeActual = [];
 let datosProfesores = [];
 let datosEstudiantes = [];
